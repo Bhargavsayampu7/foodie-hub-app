@@ -2,7 +2,6 @@
 
 FoodieHub is a modern, real-time web application that allows users to share and discover reviews for specific dishes at restaurants. Designed for culinary enthusiasts, it lets you post detailed experiences—complete with photos, ratings, and feedback—while also supporting interactive features for the community.
 
-> _Replace this section with a screenshot of your app for added appeal!_
 
 ##  Key Features
 
@@ -28,7 +27,7 @@ FoodieHub is a modern, real-time web application that allows users to share and 
 - **AI / Machine Learning:** [Google Gemini API](https://ai.google.dev/) for image-to-text receipt verification
 - **Icons:** [Lucide React](https://lucide.dev/)
 
-## 🚀 Getting Started: Running Locally
+##  Getting Started: Running Locally
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing.
 
