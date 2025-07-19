@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+FoodieHub: A Collaborative Food Review AppFoodieHub is a modern, real-time web application where users can share and discover reviews for specific dishes at restaurants. It's a food blog platform designed for culinary enthusiasts to post their experiences, complete with photos, ratings, and detailed feedback, which other users can then upvote or downvote.(Note: You can replace this with a screenshot of your app) Key FeaturesReal-Time Food Feed: A dynamic home page displaying all user reviews in a beautiful 3-column grid layout.Create Verified Reviews: Users can post detailed reviews including dish name, restaurant, area, rating, price, and food type (Veg/Non-Veg).Image Uploads: Users must upload a photo of the dish and a bill/receipt for authenticity.Gemini AI Verification: Utilizes the Google Gemini API to scan the uploaded receipt and verify that the restaurant and dish names match the review content, adding a "Verified" badge to authentic reviews.Interactive Voting: Users can upvote or downvote reviews to express their agreement.Advanced Filtering & Search: The feed can be searched by dish, restaurant, or area, and filtered by food type and price range.Fully Responsive: A clean, modern UI that works seamlessly on desktop, tablet, and mobile devices.🛠️ Technologies UsedFrontend: React.jsBackend & Database: Google Firebase (Firestore, Authentication)Styling: Tailwind CSSAI / Machine Learning: Google Gemini API for image-to-text verification.Icons: Lucide React🚀 Getting Started: Running LocallyFollow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.PrerequisitesYou must have Node.js (which includes npm) installed on your machine.Installation & SetupClone the RepositoryOpen your terminal and clone the project from your GitHub repository.git clone https://github.com/your-username/foodie-hub-app.git
+cd foodie-hub-app
+Install DependenciesInstall all the necessary npm packages.npm install
+Set Up Environment VariablesCreate a new file in the root of your project named .env. This file will hold your secret keys and configuration.touch .env
+Open the .env file and add the following, replacing the placeholder values with your actual keys:# Your Unique App ID (can be any string for local dev)
+REACT_APP_APP_ID=foodie-hub-local-dev
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Your Firebase Project Configuration
+REACT_APP_FIREBASE_API_KEY="AIzaSy..."
+REACT_APP_FIREBASE_AUTH_DOMAIN="your-project-id.firebaseapp.com"
+REACT_APP_FIREBASE_PROJECT_ID="your-project-id"
+REACT_APP_FIREBASE_STORAGE_BUCKET="your-project-id.appspot.com"
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID="..."
+REACT_APP_FIREBASE_APP_ID="..."
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Your Google Gemini API Key
+REACT_APP_GEMINI_API_KEY="AIzaSy..."
+You can get your Firebase config from your Firebase project settings and your Gemini key from Google AI Studio.Connect to Firebase in the CodeYou'll need to slightly modify the code to use these new environment variables. Open src/App.js and replace the existing firebaseConfig object with this:const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
+};
+And update the Gemini API key line:const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
+Run the ApplicationStart the local development server.npm start
+The application should now be running in your browser at http://localhost:3000.☁️ DeploymentThis application is configured for easy deployment using Firebase Hosting. Once you have made your changes, follow these steps:Build the project:npm run build
+Deploy to Firebase:firebase deploy
