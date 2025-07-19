@@ -1,8 +1,43 @@
-FoodieHub: A Collaborative Food Review AppFoodieHub is a modern, real-time web application where users can share and discover reviews for specific dishes at restaurants. It's a food blog platform designed for culinary enthusiasts to post their experiences, complete with photos, ratings, and detailed feedback, which other users can then upvote or downvote.(Note: You can replace this with a screenshot of your app) Key FeaturesReal-Time Food Feed: A dynamic home page displaying all user reviews in a beautiful 3-column grid layout.Create Verified Reviews: Users can post detailed reviews including dish name, restaurant, area, rating, price, and food type (Veg/Non-Veg).Image Uploads: Users must upload a photo of the dish and a bill/receipt for authenticity.Gemini AI Verification: Utilizes the Google Gemini API to scan the uploaded receipt and verify that the restaurant and dish names match the review content, adding a "Verified" badge to authentic reviews.Interactive Voting: Users can upvote or downvote reviews to express their agreement.Advanced Filtering & Search: The feed can be searched by dish, restaurant, or area, and filtered by food type and price range.Fully Responsive: A clean, modern UI that works seamlessly on desktop, tablet, and mobile devices.🛠️ Technologies UsedFrontend: React.jsBackend & Database: Google Firebase (Firestore, Authentication)Styling: Tailwind CSSAI / Machine Learning: Google Gemini API for image-to-text verification.Icons: Lucide React🚀 Getting Started: Running LocallyFollow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.PrerequisitesYou must have Node.js (which includes npm) installed on your machine.Installation & SetupClone the RepositoryOpen your terminal and clone the project from your GitHub repository.git clone https://github.com/your-username/foodie-hub-app.git
-cd foodie-hub-app
-Install DependenciesInstall all the necessary npm packages.npm install
-Set Up Environment VariablesCreate a new file in the root of your project named .env. This file will hold your secret keys and configuration.touch .env
-Open the .env file and add the following, replacing the placeholder values with your actual keys:# Your Unique App ID (can be any string for local dev)
+# FoodieHub: A Collaborative Food Review AppFoodieHub 
+is a modern, real-time web application where users can share and discover reviews for specific dishes at restaurants. It's a food blog platform designed for culinary enthusiasts to post their experiences, complete with photos, ratings, and detailed feedback, which other users can then upvote or downvote.
+
+# Key Features
+## Real-Time Food Feed: A dynamic home page displaying all user reviews in a beautiful 3-column grid layout.
+## Create Verified Reviews: Users can post detailed reviews including dish name, restaurant, area, rating, price, and food type (Veg/Non-Veg).
+## Image Uploads: Users must upload a photo of the dish and a bill/receipt for authenticity.
+## Gemini AI Verification: Utilizes the Google Gemini API to scan the uploaded receipt and verify that the restaurant and dish names match the review content, adding a "Verified" badge to authentic reviews.
+## Interactive Voting: Users can upvote or downvote reviews to express their agreement.
+## Advanced Filtering & Search: The feed can be searched by dish, restaurant, or area, and filtered by food type and price range.
+## Fully Responsive: A clean, modern UI that works seamlessly on desktop, tablet, and mobile devices.
+
+# Technologies Used
+## Frontend: React.js
+## Backend & Database: Google Firebase (Firestore, Authentication)
+## Styling: Tailwind CSSAI / Machine Learning: Google Gemini API for image-to-text verification.
+## Icons: Lucide React
+
+# Getting Started: Running Locally
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+## Prerequisites
+You must have Node.js (which includes npm) installed on your machine.
+
+## Installation & Setup
+## 1. Clone the Repository
+Open your terminal and clone the project from your GitHub repository.
+### git clone https://github.com/your-username/foodie-hub-app.git
+### cd foodie-hub-app
+
+## 2. Install Dependencies
+Install all the necessary npm packages.
+### npm install
+
+## 3. Set Up Environment Variables
+Create a new file in the root of your project named .env. This file will hold your secret keys and configuration.
+### touch .env
+
+Open the .env file and add the following, replacing the placeholder values with your actual keys:
+# Your Unique App ID (can be any string for local dev)
 REACT_APP_APP_ID=foodie-hub-local-dev
 
 # Your Firebase Project Configuration
